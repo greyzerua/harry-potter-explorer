@@ -7,12 +7,9 @@ import react from '@vitejs/plugin-react';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-
-const BASE_PATH =
-  process.env.NODE_ENV === 'production' ? '/harry-potter-explorer/' : '/';
-
+ 
 export default defineConfig({
-  base: BASE_PATH,
+  base:  process.env.NODE_ENV === 'production' ? '/harry-potter-test/' : '/',
   plugins: [react()],
   resolve: {
     alias: {
