@@ -1,0 +1,1 @@
+import{a as t,A as r}from"./config-BfsZ-eMY.js";const c="/characters",e="/character",o=async()=>{const{data:a}=await t.get(`${r}${c}`);return a},A=async a=>{const{data:s}=await t.get(`${r}${e}/${a}`);return s[0]??null};export{A as a,o as g};
