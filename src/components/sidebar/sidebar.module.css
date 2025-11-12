@@ -3,7 +3,6 @@
     display: flex;
     flex-direction: column;
     gap: 24px;
-    width: 200px;
     padding: 36px 26px;
     background: linear-gradient(180deg, rgba(1, 6, 3, 0.65) 0%, rgba(0, 19, 7, 0.65) 45%);
     border-right: 1px solid rgba(198, 166, 100, 0.35);
@@ -11,6 +10,7 @@
     backdrop-filter: blur(12px);
     isolation: isolate;
     overflow: hidden;
+    box-sizing: border-box;
 }
 
 
@@ -34,10 +34,37 @@
     .sidebar {
         width: 100%;
         padding: 28px 22px;
+        border-right: none;
+        border-bottom: 1px solid rgba(198, 166, 100, 0.35);
+        box-shadow: 0 6px 30px rgba(0, 0, 0, 0.3);
     }
 
     .link {
         font-size: 14px;
+    }
+}
+
+@media (max-width: 640px) {
+    .sidebar {
+        padding: 22px 18px;
+        gap: 20px;
+    }
+
+    .nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 14px;
+    }
+}
+
+@media (max-width: 420px) {
+    .sidebar {
+        padding: 18px 12px;
+    }
+
+    .link {
+        font-size: 13px;
     }
 }
 

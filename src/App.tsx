@@ -1,5 +1,6 @@
 import { Route, Routes } from 'react-router-dom'
 
+import { BackToTop } from './components/back-to-top'
 import { Sidebar } from './components/sidebar/sidebar'
 import { APP_LINK_URLS, EAppPage } from './constants/link-urls'
 import { CharacterDetails } from './pages/character-details'
@@ -18,6 +19,7 @@ const App = () => (
         <Route path={APP_LINK_URLS[EAppPage.CHARACTERS]} element={<Characters />} />
         <Route path={`${APP_LINK_URLS[EAppPage.CHARACTERS]}/:id`} element={<CharacterDetails />} />
       </Routes>
+      <BackToTop />
     </main>
   </div>
 );
