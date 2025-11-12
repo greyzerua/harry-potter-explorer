@@ -1,9 +1,9 @@
-import clsx from 'clsx';
+import clsx from 'clsx'
 
-import { AppLink } from 'src/components/app-link';
-import { EAppPage } from 'src/constants/link-urls';
+import { AppLink } from '../app-link'
+import { EAppPage } from '../../constants/link-urls'
 
-import styles from './sidebar.module.css';
+import styles from './sidebar.module.css'
 
 type Props = {
     className?: string;

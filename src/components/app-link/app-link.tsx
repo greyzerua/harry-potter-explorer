@@ -1,12 +1,12 @@
-import type { ComponentProps } from 'react';
-import { NavLink } from 'react-router-dom';
+import type { ComponentProps } from 'react'
+import { NavLink } from 'react-router-dom'
 
-import clsx from 'clsx';
+import clsx from 'clsx'
 
-import type { EAppPage } from 'src/constants/link-urls';
-import { APP_LINK_URLS } from 'src/constants/link-urls';
+import type { EAppPage } from '../../constants/link-urls'
+import { APP_LINK_URLS } from '../../constants/link-urls'
 
-import styles from './app-link.module.css';
+import styles from './app-link.module.css'
 
 interface GetClassNameParameters {
     className?: string;

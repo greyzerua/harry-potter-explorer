@@ -1,11 +1,11 @@
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom'
 
-import { Sidebar } from 'src/components/sidebar/sidebar';
-import { APP_LINK_URLS, EAppPage } from 'src/constants/link-urls';
-import { CharacterDetails } from 'src/pages/character-details';
-import { Characters } from 'src/pages/characters';
-import { Spells } from 'src/pages/spells';
-import styles from './App.module.css';
+import { Sidebar } from './components/sidebar/sidebar'
+import { APP_LINK_URLS, EAppPage } from './constants/link-urls'
+import { CharacterDetails } from './pages/character-details'
+import { Characters } from './pages/characters'
+import { Spells } from './pages/spells'
+import styles from './App.module.css'
 
 const App = () => (
   <div className={styles.layout}>

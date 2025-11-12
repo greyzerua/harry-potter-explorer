@@ -1,44 +1,44 @@
-import { useEffect, useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { useEffect, useState } from 'react'
+import { Link, useParams } from 'react-router-dom'
 
-import { getCharacterById } from 'src/api/characters';
-import type { Character } from 'src/api/characters';
+import { getCharacterById } from '../../api/characters'
+import type { Character } from '../../api/characters'
 
-import styles from './character-details.module.css';
+import styles from './character-details.module.css'
 
 const CharacterDetails = () => {
-  const { id } = useParams<{ id: string }>();
-  const [character, setCharacter] = useState<Character | null>(null);
-  const [isLoading, setIsLoading] = useState<boolean>(true);
-  const [error, setError] = useState<string | null>(null);
+  const { id } = useParams<{ id: string }>()
+  const [character, setCharacter] = useState<Character | null>(null)
+  const [isLoading, setIsLoading] = useState<boolean>(true)
+  const [error, setError] = useState<string | null>(null)
 
   useEffect(() => {
     if (!id) {
-      setError('Character not found.');
-      setIsLoading(false);
-      return;
+      setError('Character not found.')
+      setIsLoading(false)
+      return
     }
 
     const fetchCharacter = async () => {
       try {
-        setIsLoading(true);
-        const data = await getCharacterById(id);
+        setIsLoading(true)
+        const data = await getCharacterById(id)
 
         if (!data) {
-          setError('Character not found.');
-          return;
+          setError('Character not found.')
+          return
         }
 
-        setCharacter(data);
+        setCharacter(data)
       } catch {
-        setError('Unable to load character details.');
+        setError('Unable to load character details.')
       } finally {
-        setIsLoading(false);
+        setIsLoading(false)
       }
-    };
+    }
 
-    fetchCharacter();
-  }, [id]);
+    fetchCharacter()
+  }, [id])
 
   return (
     <section className={styles.container}>
@@ -69,8 +69,7 @@ const CharacterDetails = () => {
         </div>
       )}
     </section>
-  );
-};
+  )
+}
 
-export { CharacterDetails };
-
+export { CharacterDetails }
